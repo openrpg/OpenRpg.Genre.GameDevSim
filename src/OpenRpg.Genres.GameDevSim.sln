@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRpg.Genres.GameDevSim", "OpenRpg.Genres.GameDevSim\OpenRpg.Genres.GameDevSim.csproj", "{F6C212C7-C384-4B7C-A2BA-3807BAC8014C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRpg.Genres.GameDevSim.ExampleApp", "OpenRpg.Genres.GameDevSim.ExampleApp\OpenRpg.Genres.GameDevSim.ExampleApp.csproj", "{273C1DBC-94C3-46C7-A39B-850D18ED73EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{51987217-4FE0-45B4-91AF-15E899779E61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C212C7-C384-4B7C-A2BA-3807BAC8014C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C212C7-C384-4B7C-A2BA-3807BAC8014C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C212C7-C384-4B7C-A2BA-3807BAC8014C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C212C7-C384-4B7C-A2BA-3807BAC8014C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{273C1DBC-94C3-46C7-A39B-850D18ED73EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{273C1DBC-94C3-46C7-A39B-850D18ED73EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{273C1DBC-94C3-46C7-A39B-850D18ED73EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{273C1DBC-94C3-46C7-A39B-850D18ED73EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{273C1DBC-94C3-46C7-A39B-850D18ED73EB} = {51987217-4FE0-45B4-91AF-15E899779E61}
+	EndGlobalSection
+EndGlobal

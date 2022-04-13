@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>GameDevStory.ConsoleApp</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="OpenRpg.Data" Version="0.19.158" />
+      <PackageReference Include="OpenRpg.Data.InMemory" Version="0.19.158" />
+      <PackageReference Include="Spectre.Console" Version="0.44.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OpenRpg.Genres.GameDevSim\OpenRpg.Genres.GameDevSim.csproj" />
+    </ItemGroup>
+
+</Project>
