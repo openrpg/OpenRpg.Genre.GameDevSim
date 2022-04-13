@@ -1,0 +1,33 @@
+version: 0.20.{build}
+branches:
+  only:
+  - main
+  - build-test
+image: Previous Visual Studio 2017
+configuration: Release
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+before_build:
+- cmd: nuget restore src/OpenRpg.Genres.GameDevSim.sln
+build:
+  project: src/OpenRpg.Genres.GameDevSim.sln
+  publish_nuget: true
+  verbosity: minimal
+artifacts:
+  - path: '**\*.nupkg'
+deploy:
+  provider: NuGet
+  on:
+    APPVEYOR_REPO_TAG: true
+  server:
+  api_key:
+    secure: 0yJPCmw0EEE6ea73EEvaB8+TjIhUs0A8wG0dR60FEAu+B/i6x33b0GweDBVyz0PE
+  skip_symbols: true
+  symbol_server:
+  artifact: /.*\.nupkg/
