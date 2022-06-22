@@ -1,4 +1,4 @@
-version: 0.20.{build}
+version: 0.23.{build}
 branches:
   only:
   - main
