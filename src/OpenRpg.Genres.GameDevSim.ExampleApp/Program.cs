@@ -10,20 +10,20 @@ var weeksToSell = 30;
 
 // Load staff and form the company
 var gooch = Services.Repository.Get<Staff>(StaffLookups.TheGoose);
-Services.StatsComputer.RecomputeStats(gooch.Stats, gooch.Effects.ToArray());
+Services.StatsPopulator.Populate(gooch.Stats, gooch.Effects.ToArray(), null);
 
 var tudge = Services.Repository.Get<Staff>(StaffLookups.Tudge);
-Services.StatsComputer.RecomputeStats(tudge.Stats, tudge.Effects.ToArray());
+Services.StatsPopulator.Populate(tudge.Stats, tudge.Effects.ToArray(), null);
 
 var kojima = Services.Repository.Get<Staff>(StaffLookups.HeroKojima);
-Services.StatsComputer.RecomputeStats(kojima.Stats, kojima.Effects.ToArray());
+Services.StatsPopulator.Populate(kojima.Stats, kojima.Effects.ToArray(), null);
 
 var company = new Company
 {
     NameLocaleId = "Tudges Money Train",
     Staff = new List<Staff> { gooch, tudge, kojima }
 };
-Services.StatsComputer.RecomputeStats(company.Stats, company.Effects.ToArray());
+Services.StatsPopulator.Populate(company.Stats, company.Effects.ToArray(), null);
 
 // Start the game loop
 async Task GameLoop()

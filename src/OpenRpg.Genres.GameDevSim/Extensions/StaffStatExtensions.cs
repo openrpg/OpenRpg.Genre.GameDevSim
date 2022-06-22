@@ -1,9 +1,11 @@
 using OpenRpg.Core.Stats;
+using OpenRpg.Core.Stats.Variables;
 using OpenRpg.Genres.GameDevSim.Types;
+using OpenRpg.Genres.GameDevSim.Variables;
 
 namespace OpenRpg.Genres.GameDevSim.Extensions
 {
-    public static class StatExtensions
+    public static class StaffStatExtensions
     {
         public static int Creativity(this IStatsVariables stats) => (int)stats.Get(StatsVariableTypes.Creativity);
         public static void Creativity(this IStatsVariables stats, int value) => stats[StatsVariableTypes.Creativity] = value;

@@ -10,7 +10,6 @@ namespace OpenRpg.Genres.GameDevSim.Models
         public GameGenre Genre { get; set; } = new GameGenre();
 
         public GameReleaseInfo GameReleaseInfo { get; set; } = new GameReleaseInfo();
-
-        public IGameVariables Variables { get; set; } = new DefaultGameVariables();
+        public IGameStateVariables State { get; set; } = new DefaultGameStateVariables();
     }
 }

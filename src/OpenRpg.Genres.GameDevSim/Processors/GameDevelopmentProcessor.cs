@@ -1,9 +1,8 @@
-using System;
 using System.Linq;
 using OpenRpg.Genres.GameDevSim.Extensions;
 using OpenRpg.Core.Effects;
 using OpenRpg.Core.Extensions;
-using OpenRpg.Core.Stats;
+using OpenRpg.Core.Stats.Variables;
 using OpenRpg.Core.Utils;
 using OpenRpg.Genres.GameDevSim.Models;
 using OpenRpg.Genres.GameDevSim.Types;
@@ -22,7 +21,7 @@ namespace OpenRpg.Genres.GameDevSim.Processors
         public void UpdateDevelopment(Game game, Company company)
         {
             var randomProgress = Randomizer.Random(1, 6);
-            game.Variables.AddProgress(randomProgress);
+            game.State.AddProgress(randomProgress);
 
             var effectsToUse = company.Effects
                 .Union(game.Genre.Effects)
@@ -35,14 +34,14 @@ namespace OpenRpg.Genres.GameDevSim.Processors
             var soundAdded = CalculateSound(company.Stats, effectsToUse);
             var stabilityAdded = CalculateStability(company.Stats, effectsToUse);
             
-            game.Variables.AddFun(funAdded);
-            game.Variables.AddGraphics(graphicsAdded);
-            game.Variables.AddQuality(qualityAdded);
-            game.Variables.AddSound(soundAdded);
-            game.Variables.AddStability(stabilityAdded);
+            game.State.AddFun(funAdded);
+            game.State.AddGraphics(graphicsAdded);
+            game.State.AddQuality(qualityAdded);
+            game.State.AddSound(soundAdded);
+            game.State.AddStability(stabilityAdded);
 
-            if (game.Variables.Progress() > 100)
-            { game.Variables.Progress(100); }
+            if (game.State.Progress() > 100)
+            { game.State.Progress(100); }
         }
 
         public int CalculateFun(IStatsVariables stats, Effect[] effects)

@@ -1,7 +1,7 @@
 using GameDevStory.ConsoleApp.Lookups;
 using OpenRpg.Core.Classes;
 using OpenRpg.Core.Effects;
-using OpenRpg.Core.Stats;
+using OpenRpg.Core.Stats.Variables;
 using OpenRpg.Genres.GameDevSim.Models;
 using OpenRpg.Genres.GameDevSim.Types;
 using OpenRpg.Genres.Types;

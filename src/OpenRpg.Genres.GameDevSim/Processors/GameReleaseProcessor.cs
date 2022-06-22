@@ -31,10 +31,10 @@ namespace OpenRpg.Genres.GameDevSim.Processors
             if (saleValue <= 0)
             { saleValue = Randomizer.Random(0.0001f, 0.01f); }
         
-            var fun = game.Variables.Fun();
-            var graphics = game.Variables.Graphics();
-            var quality = game.Variables.Quality();
-            var sound = game.Variables.Sound();
+            var fun = game.State.Fun();
+            var graphics = game.State.Graphics();
+            var quality = game.State.Quality();
+            var sound = game.State.Sound();
             var total = fun + graphics + quality + sound;
         
             // Account for first week/preorders

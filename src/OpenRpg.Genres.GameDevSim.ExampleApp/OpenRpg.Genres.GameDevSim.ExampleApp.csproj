@@ -9,8 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="OpenRpg.Data" Version="0.19.158" />
-      <PackageReference Include="OpenRpg.Data.InMemory" Version="0.19.158" />
+      <PackageReference Include="OpenRpg.Data" Version="0.23.178" />
+      <PackageReference Include="OpenRpg.Data.InMemory" Version="0.23.178" />
       <PackageReference Include="Spectre.Console" Version="0.44.0" />
     </ItemGroup>
 

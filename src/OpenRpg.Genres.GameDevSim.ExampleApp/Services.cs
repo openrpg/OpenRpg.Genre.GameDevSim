@@ -15,6 +15,5 @@ public class Services
     
     public static readonly IRepository Repository = new DefaultRepository(new InMemoryGameDataSource());
     
-    public static readonly DefaultAttributeStatPopulator AttributeStatsPopulator = new();
-    public static readonly DefaultStatsComputer StatsComputer = new(AttributeStatsPopulator);
+    public static readonly DefaultStatPopulator StatsPopulator = new();
 }

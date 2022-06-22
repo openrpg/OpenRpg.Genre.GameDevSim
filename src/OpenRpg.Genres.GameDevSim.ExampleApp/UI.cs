@@ -12,11 +12,11 @@ public class UI
     {
         return new[]
         {
-            new BarChartItem("Fun", (int)game.Variables.Fun(), Color.Blue),
-            new BarChartItem("Graphics", (int)game.Variables.Graphics(), Color.Green),
-            new BarChartItem("Quality", (int)game.Variables.Quality(), Color.Yellow),
-            new BarChartItem("Sound", (int)game.Variables.Sound(), Color.Red),
-            new BarChartItem("Stability", (int)game.Variables.Stability(), Color.Grey)
+            new BarChartItem("Fun", (int)game.State.Fun(), Color.Blue),
+            new BarChartItem("Graphics", (int)game.State.Graphics(), Color.Green),
+            new BarChartItem("Quality", (int)game.State.Quality(), Color.Yellow),
+            new BarChartItem("Sound", (int)game.State.Sound(), Color.Red),
+            new BarChartItem("Stability", (int)game.State.Stability(), Color.Grey)
         };
     }
     
@@ -24,7 +24,7 @@ public class UI
     {
         return new[]
         {
-            new BarChartItem("Progress", (int)game.Variables.Progress(), Color.White)
+            new BarChartItem("Progress", (int)game.State.Progress(), Color.White)
         };
     }
     
@@ -88,7 +88,7 @@ public class UI
         await AnsiConsole.Live(panel)
             .StartAsync(async ctx => 
             {
-                while (game.Variables.Progress() < 100)
+                while (game.State.Progress() < 100)
                 {
                     Services.GameDevelopmentProcessor.UpdateDevelopment(game, company);
                     gameChart.Data.Clear();

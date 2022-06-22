@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using OpenRpg.Core.Common;
 using OpenRpg.Core.Effects;
 using OpenRpg.Core.Stats;
+using OpenRpg.Core.Stats.Variables;
 using OpenRpg.Genres.GameDevSim.Variables;
 
 namespace OpenRpg.Genres.GameDevSim.Models
