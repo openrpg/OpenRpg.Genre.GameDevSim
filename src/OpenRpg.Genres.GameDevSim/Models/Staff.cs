@@ -1,12 +1,16 @@
 ﻿using System.Collections.Generic;
+using OpenRpg.Core.Common;
 using OpenRpg.Core.Effects;
 using OpenRpg.Genres.Characters;
 using OpenRpg.Items.Extensions;
 
 namespace OpenRpg.Genres.GameDevSim.Models
 {
-    public class Staff : DefaultCharacter, IHasEffects
+    public class Staff : DefaultCharacter, IHasEffects, IHasDataId
     {
+        // We are pre-defining character ids so dont need the UniqueId
+        public int Id { get; set; }
+        
         public ICollection<Effect> UniqueEffects { get; set; } = new List<Effect>();
     
         public virtual IEnumerable<Effect> Effects
